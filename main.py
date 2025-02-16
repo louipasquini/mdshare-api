@@ -80,3 +80,7 @@ def update_markdown(markdown_id: str, markdown: MarkdownCreate, db: Session = De
     db.refresh(existing_markdown)
 
     return existing_markdown
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
